@@ -180,42 +180,6 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="_content">
-                                        <!-- 表格樣式 -->
-                                        <div class="table_wrapper">
-                                            <table class="table_hover">
-                                                <caption>每天次數報表格式(最多60天)</caption>
-                                                <thead>
-                                                    <tr>
-                                                        <th>序號</th>
-                                                        <th class="text-left">名稱</th>
-                                                        <!--th>預約案號</th>
-                                                    <th>虛擬主機(編號)</th-->
-                                                        <th class="text-left">每天次數</th>
-                                                        <th class="text-left">事件次數</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="num">1</td>
-                                                        <td>訪客國家</td>
-                                                        <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                        <td>2025/03/03</td>
-                                                        <td>503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">2</td>
-                                                        <td>首頁流量first_visit</td>
-                                                        <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                        <td>2025/03/04</td>
-                                                        <td>503</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -223,105 +187,106 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- JS-->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="vendor/jquery.easing.min.js"></script>
-        <!-- template customize js -->
-        <script src="js/customize.js"></script>
-        <!-- highlight -->
-        <script src="vendor/highlight/highlight.pack.js"></script>
-        <!-- tree view -->
-        <script src="vendor/treeview/jquery.treeview.js"></script>
-        <!-- highchart plugin -->
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/highcharts-more.js"></script>
-        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-        <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
-        <script>
-            $(".treeview .treeview").treeview();
-            $('header').load("header.htm");
-            $('aside').load("aside.htm");
-            var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-            // 長條
-            Highcharts.chart('axes_line_column1', {
-                chart: {
-                    zoomType: 'xy'
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- highchart plugin -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+    <script>
+        $(".treeview .treeview").treeview();
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+        var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+        // 長條
+        Highcharts.chart('axes_line_column1', {
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: '統計資訊'
+            },
+            // subtitle: {
+            //     text: 'Source: 勞安所科研採購網'
+            // },
+            colors: _Color,
+            xAxis: [{
+                categories: ['2025/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
                 },
                 title: {
-                    text: '統計資訊'
-                },
-                // subtitle: {
-                //     text: 'Source: 勞安所科研採購網'
-                // },
-                colors: _Color,
-                xAxis: [{
-                    categories: ['2025/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-                    crosshair: true
-                }],
-                yAxis: [{ // Primary yAxis
-                    labels: {
-                        format: '{value}',
-                        style: {
-                            color: Highcharts.getOptions().colors[1]
-                        }
-                    },
-                    title: {
-                        text: '次數',
-                        style: {
-                            color: Highcharts.getOptions().colors[1]
-                        }
+                    text: '次數',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
                     }
-                }, { // Secondary yAxis
-                    title: {
-                        text: '',
-                        style: {
-                            color: Highcharts.getOptions().colors[0]
-                        }
-                    },
-                    labels: {
-                        format: '{value}',
-                        style: {
-                            color: Highcharts.getOptions().colors[0]
-                        }
-                    },
-                    opposite: true
-                }],
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: '',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 20,
+                verticalAlign: 'top',
+                y: 20,
+                floating: true,
+                backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                    'rgba(255,255,255,0.25)'
+            },
+            series: [{
+                name: '首頁流量first_visit',
+                type: 'column',
+                yAxis: 1,
+                data: [1249.0, 1071.0, 1106.0, 2329.0, 3144.0, 3260.0, 1035.0, 48.0, 16.0, 1219.0, 1295.0, 54.0],
                 tooltip: {
-                    shared: true
-                },
-                legend: {
-                    layout: 'vertical',
-                    align: 'left',
-                    x: 20,
-                    verticalAlign: 'top',
-                    y: 20,
-                    floating: true,
-                    backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
-                        'rgba(255,255,255,0.25)'
-                },
-                series: [{
-                    name: '首頁流量first_visit',
-                    type: 'column',
-                    yAxis: 1,
-                    data: [1249.0, 1071.0, 1106.0, 2329.0, 3144.0, 3260.0, 1035.0, 48.0, 16.0, 1219.0, 1295.0, 54.0],
-                    tooltip: {
-                        valueSuffix: ''
-                    }
-                }, {
-                    name: '訪客國家',
-                    type: 'column',
-                    yAxis: 1,
-                    data: [1217.0, 1226.0, 2289.0, 3294.0, 2278.0, 3191.0, 125.0, 1226.0, 1213.0, 118.0, 1153.0, 19.0],
-                    tooltip: {
-                        valueSuffix: ''
-                    }
-                }]
-            });
-        </script>
+                    valueSuffix: ''
+                }
+            }, {
+                name: '訪客國家',
+                type: 'column',
+                yAxis: 1,
+                data: [1217.0, 1226.0, 2289.0, 3294.0, 2278.0, 3191.0, 125.0, 1226.0, 1213.0, 118.0, 1153.0, 19.0],
+                tooltip: {
+                    valueSuffix: ''
+                }
+            }]
+        });
+    </script>
 </body>
 
 </html>
