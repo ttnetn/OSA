@@ -43,18 +43,38 @@
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
-                    <!-- flex-12 搜尋 -->
+                    <!-- flex-12 搜尋區塊-->
                     <div class="flex-12">
-                        <div class="adv_search" id="open" style="display:block;">
+                        <div class="adv_search">
                             <div class="col">
                                 <div class="content_block">
                                     <div class="_head">
                                         <h3>查詢</h3>
                                     </div>
                                     <div class="_content">
-                                        <h4>查詢條件設定</h4>
                                         <div class="flex-form flex-6-6">
-
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <select name="search_deptid" id="search_deptid">
+                                                        <option value="" disabled selected></option>
+                                                        <option value="0">全部</option>
+                                                        <option value="001">first_visit</option>
+                                                        <option value="002">clicktracking</option>
+                                                    </select>
+                                                    <label>事件</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <select name="search_deptid" id="search_deptid">
+                                                        <option value="" disabled selected></option>
+                                                        <option value="0">全部</option>
+                                                        <option value="001">Taiwan</option>
+                                                        <option value="002">Japan</option>
+                                                    </select>
+                                                    <label>國家</label>
+                                                </div>
+                                            </div>
                                             <div class="form_grp datepick">
                                                 <div class="startDate">
                                                     <div class="labelEffect">
@@ -64,7 +84,7 @@
                                                             onblur="if(!this.value) this.type='text'">
                                                         <!--input name="" type="calendar" value="" class="calendar">
                                                         <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>日期(起)</label>
+                                                        <label>開始日期</label>
                                                     </div>
                                                     <!-- <div class="help">說明文字</div> -->
                                                 </div>
@@ -75,30 +95,12 @@
                                                             onblur="if(!this.value) this.type='text'">
                                                         <!--input name="" type="calendar" value="" class="calendar">
                                                         <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>日期(迄)</label>
+                                                        <label>結束日期</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form_grp form_inline">
-                                                <div class="labelEffect">
-                                                    <select id="" name="">
-                                                        <option value="" selected="" disabled="disabled"></option>
-                                                        <option value="1">首頁流量first_visit</option>
-                                                        <option value="2">訪客國家</option>
-                                                    </select>
-                                                    <label>首頁流量first_visit</label>
-                                                </div>
-                                                <div class="labelEffect">
-                                                    <select id="" name="">
-                                                        <option value="" selected="" disabled="disabled"></option>
-                                                        <option value="1">1~1000</option>
-                                                        <option value="2">1000~2000</option>
-                                                        <option value="3">2000~3000</option>
-                                                    </select>
-                                                    <label>事件計數區間</label>
-                                                </div>
-                                            </div>
                                         </div>
+
                                         <div class="btn_grp">
                                             <button class="btn reset">取消</button>
                                             <button class="btn btn-primary">確認</button>
@@ -108,11 +110,11 @@
                             </div>
                         </div>
                     </div>
+                    <!-- flex-12 -->
                     <div class="flex-12">
                         <div class="col">
                             <p class="notice">目前條件 - 查詢日期：2025/1/1~2025/12/31</p>
                         </div>
-
                     </div>
                     <div class="flex-12">
                         <div class="col ">
@@ -128,11 +130,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>使用者按國家劃分(前10名)</h3>
+                                </div>
+                                <div class="_content">
+                                    <!-- 長條圖 -->
+                                    <figure class="highcharts-figure">
+                                        <div id="line2"></div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- flex-12 -->
                     <div class="flex-12">
                         <div class="col ">
-
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
@@ -156,29 +170,65 @@
                                                     <th class="text-left">名稱</th>
                                                     <!--th>預約案號</th>
                                                     <th>虛擬主機(編號)</th-->
-                                                    <th class="text-left">每月次數</th>
+                                                    <th class="text-left">月份</th>
                                                     <th class="text-left">事件次數</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td class="num">1</td>
-                                                    <td>訪客國家</td>
+                                                    <td>clicktracking</td>
                                                     <!--td>1110101001</td>
                                                     <td>1</td-->
                                                     <td>2025年3月 </td>
-                                                    <td>1503</td>
+                                                    <td>503</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="num">2</td>
-                                                    <td>首頁流量first_visit</td>
+                                                    <td>first_visit</td>
                                                     <!--td>1110101001</td>
                                                     <td>1</td-->
                                                     <td>2025年4月 </td>
-                                                    <td>1503</td>
+                                                    <td>503</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                    <div class="_content">
+                                        <!-- 表格樣式 -->
+                                        <div class="table_wrapper">
+                                            <table class="table_hover">
+                                                <caption>每月次數報表格式</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>序號</th>
+                                                        <th class="text-left">國家</th>
+                                                        <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                        <th class="text-left">月份</th>
+                                                        <th class="text-left">事件次數</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="num">1</td>
+                                                        <td>Taiwan</td>
+                                                        <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                        <td>2025年3月</td>
+                                                        <td>21503</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="num">2</td>
+                                                        <td>United States</td>
+                                                        <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                        <td>2025年4月</td>
+                                                        <td>19103</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -186,107 +236,138 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- JS-->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="vendor/jquery.easing.min.js"></script>
-    <!-- template customize js -->
-    <script src="js/customize.js"></script>
-    <!-- highlight -->
-    <script src="vendor/highlight/highlight.pack.js"></script>
-    <!-- tree view -->
-    <script src="vendor/treeview/jquery.treeview.js"></script>
-    <!-- highchart plugin -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
-    <script>
-        $(".treeview .treeview").treeview();
-        $('header').load("header.htm");
-        $('aside').load("aside.htm");
-        var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-        // 長條
-        Highcharts.chart('axes_line_column1', {
-            chart: {
-                zoomType: 'xy'
-            },
-            title: {
-                text: '統計資訊'
-            },
-            // subtitle: {
-            //     text: 'Source: 勞安所科研採購網'
-            // },
-            colors: _Color,
-            xAxis: [{
-                categories: ['2025/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-                crosshair: true
-            }],
-            yAxis: [{ // Primary yAxis
-                labels: {
-                    format: '{value}',
-                    style: {
-                        color: Highcharts.getOptions().colors[1]
-                    }
-                },
-                title: {
-                    text: '次數',
-                    style: {
-                        color: Highcharts.getOptions().colors[1]
-                    }
-                }
-            }, { // Secondary yAxis
-                title: {
-                    text: '',
-                    style: {
-                        color: Highcharts.getOptions().colors[0]
-                    }
-                },
-                labels: {
-                    format: '{value}',
-                    style: {
-                        color: Highcharts.getOptions().colors[0]
-                    }
-                },
-                opposite: true
-            }],
-            tooltip: {
-                shared: true
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'left',
-                x: 20,
-                verticalAlign: 'top',
-                y: 20,
-                floating: true,
-                backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
-                    'rgba(255,255,255,0.25)'
-            },
-            series: [{
-                name: '首頁流量first_visit',
-                type: 'column',
-                yAxis: 1,
-                data: [1249.0, 1071.0, 1106.0, 2329.0, 3144.0, 3260.0, 1035.0, 48.0, 16.0, 1219.0, 1295.0, 54.0],
-                tooltip: {
-                    valueSuffix: ''
-                }
-            }, {
-                name: '訪客國家',
-                type: 'column',
-                yAxis: 1,
-                data: [1217.0, 1226.0, 2289.0, 3294.0, 2278.0, 3191.0, 125.0, 1226.0, 1213.0, 118.0, 1153.0, 19.0],
-                tooltip: {
-                    valueSuffix: ''
-                }
-            }]
-        });
-    </script>
+            <!-- JS-->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="vendor/jquery.easing.min.js"></script>
+            <!-- template customize js -->
+            <script src="js/customize.js"></script>
+            <!-- highlight -->
+            <script src="vendor/highlight/highlight.pack.js"></script>
+            <!-- tree view -->
+            <script src="vendor/treeview/jquery.treeview.js"></script>
+            <!-- highchart plugin -->
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/highcharts-more.js"></script>
+            <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>
+            <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+            <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+            <script>
+                $(".treeview .treeview").treeview();
+                $('header').load("header.htm");
+                $('aside').load("aside.htm");
+                var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+                // 長條
+                Highcharts.chart('axes_line_column1', {
+                    chart: {
+                        zoomType: 'xy'
+                    },
+                    title: {
+                        text: '統計資訊'
+                    },
+                    // subtitle: {
+                    //     text: 'Source: 勞安所科研採購網'
+                    // },
+                    colors: _Color,
+                    xAxis: [{
+                        categories: ['2025/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                        crosshair: true
+                    }],
+                    yAxis: [{ // Primary yAxis
+                        labels: {
+                            format: '{value}',
+                            style: {
+                                color: Highcharts.getOptions().colors[1]
+                            }
+                        },
+                        title: {
+                            text: '次數',
+                            style: {
+                                color: Highcharts.getOptions().colors[1]
+                            }
+                        }
+                    }, { // Secondary yAxis
+                        title: {
+                            text: '',
+                            style: {
+                                color: Highcharts.getOptions().colors[0]
+                            }
+                        },
+                        labels: {
+                            format: '{value}',
+                            style: {
+                                color: Highcharts.getOptions().colors[0]
+                            }
+                        },
+                        opposite: true
+                    }],
+                    tooltip: {
+                        shared: true
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'left',
+                        x: 20,
+                        verticalAlign: 'top',
+                        y: 20,
+                        floating: true,
+                        backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                            'rgba(255,255,255,0.25)'
+                    },
+                    series: [{
+                        name: 'first_visit',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [1249.0, 1071.0, 1106.0, 2329.0, 3144.0, 3260.0, 1035.0, 48.0, 16.0, 1219.0, 1295.0, 54.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'clicktracking',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [1217.0, 1226.0, 2289.0, 3294.0, 2278.0, 3191.0, 125.0, 1226.0, 1213.0, 118.0, 1153.0, 19.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }]
+                });
+                // 長條圖2
+                Highcharts.chart('line2', {
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '統計資訊'
+                    },
+                    colors: _Color,
+                    xAxis: {
+                        categories: ['Taiwan', 'Japan', 'United States', 'Canada', 'India', 'Canada',]
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Total fruit consumption'
+                        }
+                    },
+                    legend: {
+                        reversed: true
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: 'normal'
+                        }
+                    },
+                    series: [{
+                        name: '次數',
+                        data: [150920, 113001, 42000, 61999, 13822, 62110, 2222, 9990, 20000, 22222, 722]
+                    },]
+                });
+                // pie
+            </script>
+
 </body>
 
 </html>
