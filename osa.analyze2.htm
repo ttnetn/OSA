@@ -2,8 +2,16 @@
 <html lang="zh-Hant">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highmaps Example</title>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="js/init-highcharts-map.js"></script>
+    <!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
+    <link rel="stylesheet" type="text/css" href="css/highcharts-custom.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/lafeber/world-flags-sprite/stylesheets/flags32-both.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>W CMS Lite</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
@@ -11,6 +19,7 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- hyUI css -->
+    <link rel="stylesheet" type="text/css" href="css/highcharts-custom.css">
     <link rel="stylesheet" href="css/supercms.css">
     <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
     <!-- favicon -->
@@ -147,6 +156,7 @@
                     </div>
                 </div>
             </div>
+            <div id="container"></div>
             <!-- flex-12 -->
             <div class="flex-12">
                 <div class="col ">
@@ -345,6 +355,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- JS-->
                     <script src="js/jquery-3.3.1.min.js"></script>
                     <script src="vendor/jquery.easing.min.js"></script>

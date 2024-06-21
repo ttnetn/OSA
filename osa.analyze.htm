@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>W CMS Lite</title>
+    <title>Highmaps Example</title>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="js/init-highcharts-map.js"></script>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- hyUI css -->
+    <link rel="stylesheet" type="text/css" href="css/highcharts-custom.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/lafeber/world-flags-sprite/stylesheets/flags32-both.css" />
     <link rel="stylesheet" href="css/supercms.css">
     <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
     <!-- favicon -->
@@ -264,19 +271,9 @@
                     </div>
                 </div>
                 <!-- 插入大圖 -->
+                <div id="container"></div>
                 <div class="flex-12">
-                    <div class="col ">
-                        <!-- 大圖區塊 -->
-                        <div class="content_block">
-                            <img src="https://i.ibb.co/VLvvQy9/2024-06-21-2-59-41.png" alt="大圖"
-                                style="width:100%; height:auto;">
-                        </div>
-                    </div>
-                </div>
-                <!-- flex-12 -->
-                <div class="flex-12">
-                    <div class="col ">
-                        <!-- 中央區塊 -->
+                    <div class="col">
                         <div class="content_block">
                             <div class="_head">
                                 <h3>統計</h3>
@@ -284,8 +281,9 @@
                             <div class="_head">
                                 <p>僅顯示Top 10國家統計資訊</p>
                                 <div class="quick_btn">
-                                    <button class="btn btn-orange" onclick="window.location.href='#';"><i
-                                            class="i_add"></i>匯出結果(Excel)</button>
+                                    <button class="btn btn-orange" onclick="window.location.href='#';">
+                                        <i class="i_add"></i>匯出結果(Excel)
+                                    </button>
                                 </div>
                             </div>
                             <div class="_content">
