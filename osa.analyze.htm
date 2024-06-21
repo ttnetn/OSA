@@ -58,9 +58,9 @@
                                                     <select name="search_deptid" id="search_deptid">
                                                         <option value="" disabled selected></option>
                                                         <option value="0">全部</option>
-                                                        <option value="001">clicktracking</option>
+                                                        <option value="001">click</option>
                                                         <option value="002">first_visit</option>
-                                                        <option value="003">page_visit</option>
+                                                        <option value="003">page_view</option>
                                                     </select>
                                                     <label>事件</label>
                                                 </div>
@@ -101,7 +101,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="btn_grp">
                                             <button class="btn reset">取消</button>
                                             <button class="btn btn-primary">確認</button>
@@ -114,7 +113,7 @@
                     <!-- flex-12 -->
                     <div class="flex-12">
                         <div class="col">
-                            <p class="notice">目前條件 - 查詢日期：2025/1/1~2025/12/31</p>
+                            <p class="notice">目前條件 - 查詢日期：2025/1/1~2025/1/31</p>
                         </div>
                     </div>
                     <div class="col ">
@@ -131,21 +130,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex-12">
-                    <div class="col ">
-                        <div class="content_block">
-                            <div class="_head">
-                                <h3>訪客國家</h3>
-                            </div>
-                            <div class="_content">
-                                <!-- 長條圖 -->
-                                <figure class="highcharts-figure">
-                                    <div id="axes_line_column2"></div>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!-- flex-12 -->
                 <div class="flex-12">
                     <div class="col ">
@@ -155,7 +139,7 @@
                                 <h3>統計</h3>
                             </div>
                             <div class="_head">
-                                <p>僅顯示符合查詢條件前10筆資訊供預覽，請使用匯出來檢視完整資料。</p>
+                                <p>僅顯示10筆資訊供預覽，請使用匯出來檢視完整資料。</p>
                                 <div class="quick_btn">
                                     <button class="btn btn-orange" onclick="window.location.href='#';"><i
                                             class="i_add"></i>匯出結果</button>
@@ -170,424 +154,373 @@
                                             <tr>
                                                 <th>序號</th>
                                                 <th class="text-left">日期</th>
-                                                <th class="text-left">事件</th>
+                                                <th class="text-left">名稱</th>
                                                 <th class="text-left">次數流量</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td class="num">1</td>
-                                                <td>2025</td>
+                                                <td>20250101</td>
                                                 <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                <td>clicktracking</td>
+                                                <td>網頁瀏覽量(page_view)</td>
                                                 <td>503</td>
                                             </tr>
                                             <tr>
                                                 <td class="num">2</td>
-                                                <td>first_visit</td>
+                                                <td>20250101</td>
                                                 <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                <td>2025年3月 </td>
+                                                <td>訪客數(user_engagement)</td>
                                                 <td>503</td>
                                             </tr>
                                             <tr>
                                                 <td class="num">3</td>
-                                                <td>page_visit</td>
+                                                <td>20250101</td>
                                                 <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                <td>2025年3月 </td>
+                                                <td>新訪客數(first_visit)</td>
                                                 <td>503</td>
                                             </tr>
                                             <tr>
                                                 <td class="num">4</td>
-                                                <td>scroll</td>
+                                                <td>20250101</td>
                                                 <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                <td>2025年3月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">5</td>
-                                                <td>clicktracking</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年3月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">6</td>
-                                                <td>first_visit</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年3月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">7</td>
-                                                <td>page_visit</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年3月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">8</td>
-                                                <td>view_search_results</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年3月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">9</td>
-                                                <td>clicktracking</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年4月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">10</td>
-                                                <td>first_visit</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年4月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">11</td>
-                                                <td>page_visit</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年4月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">12</td>
-                                                <td>scroll</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年4月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">13</td>
-                                                <td>clicktracking</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年4月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">14</td>
-                                                <td>first_visit</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年4月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">15</td>
-                                                <td>page_visit</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年4月 </td>
-                                                <td>503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">16</td>
-                                                <td>view_search_results</td>
-                                                <!--td>1110101001</td>
-                                                    <td>1</td-->
-                                                <td>2025年4月 </td>
+                                                <td>點擊(click)</td>
                                                 <td>503</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="_content">
-                                    <!-- 表格樣式 -->
-                                    <div class="table_wrapper">
-                                        <table class="table_hover">
-                                            <caption>每月次數報表格式</caption>
-                                            <thead>
-                                                <tr>
-                                                    <th>序號</th>
-                                                    <th class="text-left">訪客國家</th>
-                                                    <!--th>預約案號</th>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 插入大圖 -->
+                <div class="flex-12">
+                    <div class="col ">
+                        <!-- 大圖區塊 -->
+                        <div class="content_block">
+                            <img src="https://i.ibb.co/VLvvQy9/2024-06-21-2-59-41.png" alt="大圖"
+                                style="width:100%; height:auto;">
+                        </div>
+                    </div>
+                </div>
+                <!-- flex-12 -->
+                <div class="flex-12">
+                    <div class="col ">
+                        <!-- 中央區塊 -->
+                        <div class="content_block">
+                            <div class="_head">
+                                <h3>統計</h3>
+                            </div>
+                            <div class="_head">
+                                <p>僅顯示Top 10國家資訊供。</p>
+                                <div class="quick_btn">
+                                    <button class="btn btn-orange" onclick="window.location.href='#';"><i
+                                            class="i_add"></i>匯出結果</button>
+                                </div>
+                            </div>
+                            <div class="_content">
+                                <!-- 表格樣式 -->
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>統計區間報表格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>序號</th>
+                                                <th class="text-left">日期</th>
+                                                <!--th>預約案號</th>
                                                     <th>虛擬主機(編號)</th-->
-                                                    <th class="text-left">月份</th>
-                                                    <th class="text-left">事件次數</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="num">1</td>
-                                                    <td>Taiwan</td>
-                                                    <!--td>1110101001</td>
+                                                <th class="text-left">國家</th>
+                                                <th class="text-left">網頁瀏覽量</th>
+                                                <th class="text-left">訪客數</th>
+                                                <th class="text-left">新訪客數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>2025/1/1~2025/1/31</td>
+                                                <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                    <td>2025年3月</td>
-                                                    <td>21503</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num">2</td>
-                                                    <td>United States</td>
-                                                    <!--td>1110101001</td>
+                                                <td>Taiwan</td>
+                                                <td>21503</td>
+                                                <td>4503</td>
+                                                <td>1503</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>2025/1/1~2025/1/31</td>
+                                                <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                    <td>2025年4月</td>
-                                                    <td>19103</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                                <td>United States</td>
+                                                <td>19103</td>
+                                                <td>3503</td>
+                                                <td>1503</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>2025/1/1~2025/1/31</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>Taiwan</td>
+                                                <td>21503</td>
+                                                <td>4503</td>
+                                                <td>1503</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>2025/1/1~2025/1/31</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>United States</td>
+                                                <td>19103</td>
+                                                <td>3503</td>
+                                                <td>1503</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <!-- JS-->
-                        <script src="js/jquery-3.3.1.min.js"></script>
-                        <script src="vendor/jquery.easing.min.js"></script>
-                        <!-- template customize js -->
-                        <script src="js/customize.js"></script>
-                        <!-- highlight -->
-                        <script src="vendor/highlight/highlight.pack.js"></script>
-                        <!-- tree view -->
-                        <script src="vendor/treeview/jquery.treeview.js"></script>
-                        <!-- highchart plugin -->
-                        <script src="https://code.highcharts.com/highcharts.js"></script>
-                        <script src="https://code.highcharts.com/highcharts-more.js"></script>
-                        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-                        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-                        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-                        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-                        <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
-                        <script>
-                            $(".treeview .treeview").treeview();
-                            $('header').load("header.htm");
-                            $('aside').load("aside.htm");
-                            var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-                            // Line 折線圖1
-                            Highcharts.chart('line1', {
-                                title: {
-                                    text: '統計資訊'
-                                },
-                                subtitle: {
-                                    text: '次數'
-                                },
-                                colors: _Color,
-                                yAxis: {
-                                    title: {
-                                        text: 'Number of Employees'
-                                    }
-                                },
-                                xAxis: {
-                                    categories: [
-                                        '2025-01-01', '2025-01-02', '2025-01-03', '2025-01-04', '2025-01-05',
-                                        '2025-01-06', '2025-01-07', '2025-01-08', '2025-01-09', '2025-01-10',
-                                        '2025-01-11', '2025-01-12', '2025-01-13', '2025-01-14', '2025-01-15',
-                                        '2025-01-16', '2025-01-17', '2025-01-18', '2025-01-19', '2025-01-20',
-                                        '2025-01-21', '2025-01-22', '2025-01-23', '2025-01-24', '2025-01-25',
-                                        '2025-01-26', '2025-01-27', '2025-01-28', '2025-01-29', '2025-01-30',
-                                        '2025-01-31'
-                                    ],
-                                    accessibility: {
-                                        rangeDescription: 'Range: 2025-01-01 to 2025-01-31'
-                                    }
-                                },
+                    </div>
+                </div>
+            </div>
+            <!-- JS-->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="vendor/jquery.easing.min.js"></script>
+            <!-- template customize js -->
+            <script src="js/customize.js"></script>
+            <!-- highlight -->
+            <script src="vendor/highlight/highlight.pack.js"></script>
+            <!-- tree view -->
+            <script src="vendor/treeview/jquery.treeview.js"></script>
+            <!-- highchart plugin -->
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/highcharts-more.js"></script>
+            <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>
+            <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+            <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+            <script>
+                $(".treeview .treeview").treeview();
+                $('header').load("header.htm");
+                $('aside').load("aside.htm");
+                var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+                // Line 折線圖1
+                Highcharts.chart('line1', {
+                    title: {
+                        text: '統計資訊'
+                    },
+                    subtitle: {
+                        text: '次數'
+                    },
+                    colors: _Color,
+                    yAxis: {
+                        title: {
+                            text: 'Number of Employees'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                            '2025-01-01', '2025-01-02', '2025-01-03', '2025-01-04', '2025-01-05',
+                            '2025-01-06', '2025-01-07', '2025-01-08', '2025-01-09', '2025-01-10',
+                            '2025-01-11', '2025-01-12', '2025-01-13', '2025-01-14', '2025-01-15',
+                            '2025-01-16', '2025-01-17', '2025-01-18', '2025-01-19', '2025-01-20',
+                            '2025-01-21', '2025-01-22', '2025-01-23', '2025-01-24', '2025-01-25',
+                            '2025-01-26', '2025-01-27', '2025-01-28', '2025-01-29', '2025-01-30',
+                            '2025-01-31'
+                        ],
+                        accessibility: {
+                            rangeDescription: 'Range: 2025-01-01 to 2025-01-31'
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle'
+                    },
+                    plotOptions: {
+                        series: {
+                            label: {
+                                connectorAllowed: false
+                            },
+                            pointStart: 0
+                        }
+                    },
+                    series: [{
+                        name: '網頁瀏覽量(page_view)',
+                        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175, 18211, 8211, 1711, 11111, 43934, 52503, 57177, 6958, 97031, 19931, 137133, 154175, 18211, 8211, 1711, 81111, 43934, 52503, 57177, 69658, 97031, 119931]
+                    }, {
+                        name: '訪客數(user_engagement)',
+                        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 20434, 211, 211, 1911, 12171, 43934, 52503, 57177, 69658, 97031, 21931, 37133, 154175, 18211, 8211, 1711, 12111, 43934, 5503, 57177, 69658, 97031, 119931]
+                    }, {
+                        name: '新訪客數(first_visit)',
+                        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 20434, 211, 211, 1911, 12171, 43934, 52503, 57177, 69658, 97031, 21931, 37133, 154175, 18211, 8211, 1711, 12111, 43934, 5503, 57177, 69658, 97031, 119931]
+                    }, {
+                        name: '點擊(click)',
+                        data: [61111, 2911, 7988, 12169, 55112, 9452, 24400, 24227, 12111, 5111, 6111, 5211, 43934, 52503, 7177, 19658, 27031, 19931, 12133, 54175, 8211, 8211, 1711, 1111, 13934, 52503, 8111, 11011, 7988, 12169, 27112]
+                    },],
+                    responsive: {
+                        rules: [{
+                            condition: {
+                                maxWidth: 500
+                            },
+                            chartOptions: {
                                 legend: {
-                                    layout: 'vertical',
-                                    align: 'right',
-                                    verticalAlign: 'middle'
-                                },
-                                plotOptions: {
-                                    series: {
-                                        label: {
-                                            connectorAllowed: false
-                                        },
-                                        pointStart: 0
-                                    }
-                                },
-                                series: [{
-                                    name: 'clicktracking',
-                                    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175, 18211, 8211, 1711, 11111, 43934, 52503, 57177, 6958, 97031, 19931, 137133, 154175, 18211, 8211, 1711, 81111, 43934, 52503, 57177, 69658, 97031, 119931]
-                                }, {
-                                    name: 'first_visit',
-                                    data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 20434, 211, 211, 1911, 12171, 43934, 52503, 57177, 69658, 97031, 21931, 37133, 154175, 18211, 8211, 1711, 12111, 43934, 5503, 57177, 69658, 97031, 119931]
-                                }, {
-                                    name: 'page_visit',
-                                    data: [12744, 17722, 16005, 19771, 20185, 24377, 32147, 3387, 33111, 21211, 29111, 11611, 23934, 52503, 57177, 69658, 97031, 19931, 37133, 14175, 18211, 8211, 1711, 21111, 43934, 52503, 57177, 69658, 97031, 119931, 1112]
-                                }, {
-                                    name: 'scroll',
-                                    data: [8111, 11011, 7988, 12169, 12112, 22452, 4400, 14227, 4111, 25211, 19111, 11911, 43934, 2503, 7177, 9658, 97031, 119931, 37133, 54175, 18211, 8211, 1711, 2111, 4334, 5503, 57177, 9258, 7031, 99931, 2112]
-                                }, {
-                                    name: 'session_start',
-                                    data: [21111, 7111, 7988, 12169, 85112, 12452, 14400, 34227, 6111, 65111, 1311, 7111, 4934, 52503, 7177, 2968, 97031, 19931, 27133, 54175, 18211, 8211, 1211, 11211, 43934, 52503, 57177, 9658, 9731, 19931]
-                                }, {
-                                    name: 'user_engagement',
-                                    data: [21121, 11611, 7988, 12169, 35112, 72452, 34400, 34227, 1111, 29111, 6111, 20211, 4934, 52503, 17177, 29658, 27031, 19931, 13133, 154175, 18211, 8211, 1711, 7111, 43234, 51503, 57177, 9658, 97031, 119931, 10112]
-                                }, {
-                                    name: 'click',
-                                    data: [61111, 2911, 7988, 12169, 55112, 9452, 24400, 24227, 12111, 5111, 6111, 5211, 43934, 52503, 7177, 19658, 27031, 19931, 12133, 54175, 8211, 8211, 1711, 1111, 13934, 52503, 8111, 11011, 7988, 12169, 27112]
-                                }, {
-                                    name: 'view_search_results',
-                                    data: [41411, 1111, 7988, 12169, 15112, 22452, 14400, 14227, 4111, 5111, 16111, 2811, 43934, 52503, 57177, 9658, 97031, 9931, 7133, 54175, 18211, 8211, 1711, 7111, 3934, 1503, 27177, 9658, 27031, 19931, 42112]
-                                }],
-                                responsive: {
-                                    rules: [{
-                                        condition: {
-                                            maxWidth: 500
-                                        },
-                                        chartOptions: {
-                                            legend: {
-                                                layout: 'horizontal',
-                                                align: 'center',
-                                                verticalAlign: 'bottom'
-                                            }
-                                        }
-                                    }]
+                                    layout: 'horizontal',
+                                    align: 'center',
+                                    verticalAlign: 'bottom'
                                 }
-                            });
+                            }
+                        }]
+                    }
+                });
 
-                            // 長條2
-                            Highcharts.chart('axes_line_column2', {
-                                chart: {
-                                    zoomType: 'xy'
-                                },
-                                title: {
-                                    text: 'Top 10'
-                                },
-                                // subtitle: {
-                                //     text: 'Source: 勞安所科研採購網'
-                                // },
-                                colors: _Color,
-                                xAxis: [{
-                                    categories: ['2025/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-                                    crosshair: true
-                                }],
-                                yAxis: [{ // Primary yAxis
-                                    labels: {
-                                        format: '{value}',
-                                        style: {
-                                            color: Highcharts.getOptions().colors[1]
-                                        }
-                                    },
-                                    title: {
-                                        text: '次數',
-                                        style: {
-                                            color: Highcharts.getOptions().colors[1]
-                                        }
-                                    }
-                                }, { // Secondary yAxis
-                                    title: {
-                                        text: '',
-                                        style: {
-                                            color: Highcharts.getOptions().colors[0]
-                                        }
-                                    },
-                                    labels: {
-                                        format: '{value}',
-                                        style: {
-                                            color: Highcharts.getOptions().colors[0]
-                                        }
-                                    },
-                                    opposite: true
-                                }],
-                                tooltip: {
-                                    shared: true
-                                },
-                                legend: {
-                                    layout: 'vertical',
-                                    align: 'left',
-                                    x: 20,
-                                    verticalAlign: 'top',
-                                    y: 20,
-                                    floating: true,
-                                    backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
-                                        'rgba(255,255,255,0.25)'
-                                },
-                                series: [{
-                                    name: 'Taiwan',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [3249.0, 3271.0, 24106.0, 24429.0, 144.0, 3260.0, 11035.0, 1988.0, 12776.0, 9219.0, 1295.0, 12854.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'Japan',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [9217.0, 13226.0, 18289.0, 17294.0, 1278.0, 7191.0, 10125.0, 8226.0, 11213.0, 4718.0, 4153.0, 6519.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'United States',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [6107.0, 8226.0, 6289.0, 11294.0, 7178.0, 5191.0, 9125.0, 10226.0, 8213.0, 2118.0, 3153.0, 9519.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'Canada',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [9307.0, 226.0, 12289.0, 12294.0, 5278.0, 6191.0, 3125.0, 9226.0, 12213.0, 8118.0, 1353.0, 1519.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'France',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [5107.0, 9226.0, 2289.0, 1294.0, 12278.0, 4191.0, 6125.0, 4226.0, 8213.0, 7118.0, 2153.0, 3519.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'New Zealand',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [5107.0, 1226.0, 6289.0, 7294.0, 8278.0, 2191.0, 9125.0, 2226.0, 8213.0, 4198.0, 8153.0, 2419.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'Colombia',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [5107.0, 8226.0, 1289.0, 1094.0, 13278.0, 8191.0, 13125.0, 6226.0, 8213.0, 2118.0, 1153.0, 9519.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'Australia',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [15107.0, 8226.0, 9289.0, 1094.0, 12278.0, 8191.0, 19125.0, 16226.0, 3213.0, 6118.0, 1153.0, 12519.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'Poland',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [5107.0, 1226.0, 1289.0, 1094.0, 12278.0, 8191.0, 19125.0, 16226.0, 11213.0, 2118.0, 1153.0, 7519.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }, {
-                                    name: 'Brazil',
-                                    type: 'column',
-                                    yAxis: 1,
-                                    data: [2107.0, 1226.0, 7289.0, 1094.0, 2278.0, 8191.0, 9125.0, 6226.0, 4213.0, 2118.0, 1153.0, 2519.0],
-                                    tooltip: {
-                                        valueSuffix: ''
-                                    }
-                                }]
-                            });
-                        </script>
+                // 長條2
+                Highcharts.chart('axes_line_column2', {
+                    chart: {
+                        zoomType: 'xy'
+                    },
+                    title: {
+                        text: 'Top 10'
+                    },
+                    // subtitle: {
+                    //     text: 'Source: 勞安所科研採購網'
+                    // },
+                    colors: _Color,
+                    xAxis: [{
+                        categories: ['2025/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                        crosshair: true
+                    }],
+                    yAxis: [{ // Primary yAxis
+                        labels: {
+                            format: '{value}',
+                            style: {
+                                color: Highcharts.getOptions().colors[1]
+                            }
+                        },
+                        title: {
+                            text: '次數',
+                            style: {
+                                color: Highcharts.getOptions().colors[1]
+                            }
+                        }
+                    }, { // Secondary yAxis
+                        title: {
+                            text: '',
+                            style: {
+                                color: Highcharts.getOptions().colors[0]
+                            }
+                        },
+                        labels: {
+                            format: '{value}',
+                            style: {
+                                color: Highcharts.getOptions().colors[0]
+                            }
+                        },
+                        opposite: true
+                    }],
+                    tooltip: {
+                        shared: true
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'left',
+                        x: 20,
+                        verticalAlign: 'top',
+                        y: 20,
+                        floating: true,
+                        backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                            'rgba(255,255,255,0.25)'
+                    },
+                    series: [{
+                        name: 'Taiwan',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [3249.0, 3271.0, 24106.0, 24429.0, 144.0, 3260.0, 11035.0, 1988.0, 12776.0, 9219.0, 1295.0, 12854.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Japan',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [9217.0, 13226.0, 18289.0, 17294.0, 1278.0, 7191.0, 10125.0, 8226.0, 11213.0, 4718.0, 4153.0, 6519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'United States',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [6107.0, 8226.0, 6289.0, 11294.0, 7178.0, 5191.0, 9125.0, 10226.0, 8213.0, 2118.0, 3153.0, 9519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Canada',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [9307.0, 226.0, 12289.0, 12294.0, 5278.0, 6191.0, 3125.0, 9226.0, 12213.0, 8118.0, 1353.0, 1519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'France',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [5107.0, 9226.0, 2289.0, 1294.0, 12278.0, 4191.0, 6125.0, 4226.0, 8213.0, 7118.0, 2153.0, 3519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'New Zealand',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [5107.0, 1226.0, 6289.0, 7294.0, 8278.0, 2191.0, 9125.0, 2226.0, 8213.0, 4198.0, 8153.0, 2419.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Colombia',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [5107.0, 8226.0, 1289.0, 1094.0, 13278.0, 8191.0, 13125.0, 6226.0, 8213.0, 2118.0, 1153.0, 9519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Australia',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [15107.0, 8226.0, 9289.0, 1094.0, 12278.0, 8191.0, 19125.0, 16226.0, 3213.0, 6118.0, 1153.0, 12519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Poland',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [5107.0, 1226.0, 1289.0, 1094.0, 12278.0, 8191.0, 19125.0, 16226.0, 11213.0, 2118.0, 1153.0, 7519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Brazil',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [2107.0, 1226.0, 7289.0, 1094.0, 2278.0, 8191.0, 9125.0, 6226.0, 4213.0, 2118.0, 1153.0, 2519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }]
+                });
+            </script>
 
 </body>
 
