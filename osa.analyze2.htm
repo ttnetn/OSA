@@ -4,14 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Highmaps Example</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-    <script src="js/init-highcharts-map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
     <!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
-    <link rel="stylesheet" type="text/css" href="css/highcharts-custom.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/gh/lafeber/world-flags-sprite/stylesheets/flags32-both.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>W CMS Lite</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
@@ -19,7 +16,6 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- hyUI css -->
-    <link rel="stylesheet" type="text/css" href="css/highcharts-custom.css">
     <link rel="stylesheet" href="css/supercms.css">
     <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
     <!-- favicon -->
@@ -156,444 +152,903 @@
                     </div>
                 </div>
             </div>
-            <div id="container"></div>
-            <!-- flex-12 -->
-            <div class="flex-12">
-                <div class="col ">
-                    <!-- 中央區塊 -->
-                    <div class="content_block">
-                        <div class="_head">
-                            <h3>統計</h3>
-                        </div>
-                        <div class="_head">
-                            <p>僅顯示符合查詢條件前10筆資訊供預覽，請使用匯出來檢視完整資料。</p>
-                            <div class="quick_btn">
-                                <button class="btn btn-orange" onclick="window.location.href='#';"><i
-                                        class="i_add"></i>匯出結果</button>
-                            </div>
-                        </div>
-                        <div class="_content">
-                            <!-- 表格樣式 -->
-                            <div class="table_wrapper">
-                                <table class="table_hover">
-                                    <caption>每月次數報表格式</caption>
-                                    <thead>
-                                        <tr>
-                                            <th>序號</th>
-                                            <th class="text-left">日期</th>
-                                            <th class="text-left">事件</th>
-                                            <th class="text-left">次數流量</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="num">1</td>
-                                            <td>2025/01/01</td>
-                                            <!--td>1110101001</td>
+            <div class="main container-fluid">
+                <h1>國家訪客</h1>
+                <div id="container"></div>
+                <hr>
+                <div class="col-12">
+                </div>
+                <label>
+                    <input class="" id="rotation-lambda" type="" min="" max="" value="">
+                </label>
+                <label>
+                    <input class="" id="rotation-phi" type="" min="" max="" value="">
+                </label>
+                <label>
+                    <input class="" id="rotation-gamma" type="" min="" max="" value="">
+                </label>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- flex-12 -->
+    <div class="flex-12">
+        <div class="col ">
+            <!-- 中央區塊 -->
+            <div class="content_block">
+                <div class="_head">
+                    <h3>統計</h3>
+                </div>
+                <div class="_head">
+                    <p>僅顯示符合查詢條件前10筆資訊供預覽，請使用匯出來檢視完整資料。</p>
+                    <div class="quick_btn">
+                        <button class="btn btn-orange" onclick="window.location.href='#';"><i
+                                class="i_add"></i>匯出結果</button>
+                    </div>
+                </div>
+                <div class="_content">
+                    <!-- 表格樣式 -->
+                    <div class="table_wrapper">
+                        <table class="table_hover">
+                            <caption>每月次數報表格式</caption>
+                            <thead>
+                                <tr>
+                                    <th>序號</th>
+                                    <th class="text-left">日期</th>
+                                    <th class="text-left">事件</th>
+                                    <th class="text-left">次數流量</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td>2025/01/01</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>clicktracking</td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">2</td>
-                                            <td>first_visit</td>
-                                            <!--td>1110101001</td>
+                                    <td>clicktracking</td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">2</td>
+                                    <td>first_visit</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年3月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">3</td>
-                                            <td>page_visit</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年3月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">3</td>
+                                    <td>page_visit</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年3月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">4</td>
-                                            <td>scroll</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年3月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">4</td>
+                                    <td>scroll</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年3月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">5</td>
-                                            <td>clicktracking</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年3月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">5</td>
+                                    <td>clicktracking</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年3月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">6</td>
-                                            <td>first_visit</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年3月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">6</td>
+                                    <td>first_visit</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年3月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">7</td>
-                                            <td>page_visit</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年3月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">7</td>
+                                    <td>page_visit</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年3月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">8</td>
-                                            <td>view_search_results</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年3月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">8</td>
+                                    <td>view_search_results</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年3月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">9</td>
-                                            <td>clicktracking</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年3月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">9</td>
+                                    <td>clicktracking</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年4月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">10</td>
-                                            <td>first_visit</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年4月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">10</td>
+                                    <td>first_visit</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年4月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">11</td>
-                                            <td>page_visit</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年4月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">11</td>
+                                    <td>page_visit</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年4月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">12</td>
-                                            <td>scroll</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年4月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">12</td>
+                                    <td>scroll</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年4月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">13</td>
-                                            <td>clicktracking</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年4月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">13</td>
+                                    <td>clicktracking</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年4月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">14</td>
-                                            <td>first_visit</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年4月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">14</td>
+                                    <td>first_visit</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年4月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">15</td>
-                                            <td>page_visit</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年4月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">15</td>
+                                    <td>page_visit</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年4月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">16</td>
-                                            <td>view_search_results</td>
-                                            <!--td>1110101001</td>
+                                    <td>2025年4月 </td>
+                                    <td>503</td>
+                                </tr>
+                                <tr>
+                                    <td class="num">16</td>
+                                    <td>view_search_results</td>
+                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                            <td>2025年4月 </td>
-                                            <td>503</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="_content">
-                                <!-- 表格樣式 -->
-                                <div class="table_wrapper">
-                                    <table class="table_hover">
-                                        <caption>每月次數報表格式</caption>
-                                        <thead>
-                                            <tr>
-                                                <th>序號</th>
-                                                <th class="text-left">訪客國家</th>
-                                                <!--th>預約案號</th>
+                                    <td>2025年4月 </td>
+                                    <td>503</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="_content">
+                        <!-- 表格樣式 -->
+                        <div class="table_wrapper">
+                            <table class="table_hover">
+                                <caption>每月次數報表格式</caption>
+                                <thead>
+                                    <tr>
+                                        <th>序號</th>
+                                        <th class="text-left">訪客國家</th>
+                                        <!--th>預約案號</th>
                                                     <th>虛擬主機(編號)</th-->
-                                                <th class="text-left">月份</th>
-                                                <th class="text-left">事件次數</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="num">1</td>
-                                                <td>Taiwan</td>
-                                                <!--td>1110101001</td>
+                                        <th class="text-left">月份</th>
+                                        <th class="text-left">事件次數</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td>Taiwan</td>
+                                        <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                <td>2025年3月</td>
-                                                <td>21503</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">2</td>
-                                                <td>United States</td>
-                                                <!--td>1110101001</td>
+                                        <td>2025年3月</td>
+                                        <td>21503</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">2</td>
+                                        <td>United States</td>
+                                        <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                <td>2025年4月</td>
-                                                <td>19103</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                                        <td>2025年4月</td>
+                                        <td>19103</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- JS-->
-                    <script src="js/jquery-3.3.1.min.js"></script>
-                    <script src="vendor/jquery.easing.min.js"></script>
-                    <!-- template customize js -->
-                    <script src="js/customize.js"></script>
-                    <!-- highlight -->
-                    <script src="vendor/highlight/highlight.pack.js"></script>
-                    <!-- tree view -->
-                    <script src="vendor/treeview/jquery.treeview.js"></script>
-                    <!-- highchart plugin -->
-                    <script src="https://code.highcharts.com/highcharts.js"></script>
-                    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-                    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-                    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-                    <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
-                    <script>
-                        $(".treeview .treeview").treeview();
-                        $('header').load("header.htm");
-                        $('aside').load("aside.htm");
-                        var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-                        // Line 折線圖1
-                        Highcharts.chart('line1', {
-                            title: {
-                                text: '統計資訊'
+            <!-- JS-->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="vendor/jquery.easing.min.js"></script>
+            <!-- template customize js -->
+            <script src="js/customize.js"></script>
+            <!-- highlight -->
+            <script src="vendor/highlight/highlight.pack.js"></script>
+            <!-- tree view -->
+            <script src="vendor/treeview/jquery.treeview.js"></script>
+            <!-- highchart plugin -->
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/highcharts-more.js"></script>
+            <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>
+            <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+            <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+            <script>
+                $(".treeview .treeview").treeview();
+                $('header').load("header.htm");
+                $('aside').load("aside.htm");
+                var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+                // Line 折線圖1
+                Highcharts.chart('line1', {
+                    title: {
+                        text: '統計資訊'
+                    },
+                    subtitle: {
+                        text: '次數'
+                    },
+                    colors: _Color,
+                    yAxis: {
+                        title: {
+                            text: 'Number of Employees'
+                        }
+                    },
+                    xAxis: {
+                        accessibility: {
+                            rangeDescription: 'Range: 1 to 30'
+                        },
+                        min: 0,
+                        max: 30,
+                        tickInterval: 1
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle'
+                    },
+                    plotOptions: {
+                        series: {
+                            label: {
+                                connectorAllowed: false
                             },
-                            subtitle: {
-                                text: '次數'
+                            pointStart: 0
+                        }
+                    },
+                    series: [{
+                        name: 'clicktracking',
+                        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175, 18211, 8211, 1711, 11111, 43934, 52503, 57177, 6958, 97031, 19931, 137133, 154175, 18211, 8211, 1711, 81111, 43934, 52503, 57177, 69658, 97031, 119931,]
+                    }, {
+                        name: 'first_visit',
+                        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 20434, 211, 211, 1911, 12171, 43934, 52503, 57177, 69658, 97031, 21931, 37133, 154175, 18211, 8211, 1711, 12111, 43934, 5503, 57177, 69658, 97031, 119931,]
+                    }, {
+                        name: 'page_visit',
+                        data: [12744, 17722, 16005, 19771, 20185, 24377, 32147, 3387, 33111, 21211, 29111, 11611, 23934, 52503, 57177, 69658, 97031, 19931, 37133, 14175, 18211, 8211, 1711, 21111, 43934, 52503, 57177, 69658, 97031, 119931, 1112,]
+                    }, {
+                        name: 'scroll',
+                        data: [8111, 11011, 7988, 12169, 12112, 22452, 4400, 14227, 4111, 25211, 19111, 11911, 43934, 2503, 7177, 9658, 97031, 119931, 37133, 54175, 18211, 8211, 1711, 2111, 4334, 5503, 57177, 9258, 7031, 99931, 2112,]
+                    }, {
+                        name: 'session_start',
+                        data: [21111, 7111, 7988, 12169, 85112, 12452, 14400, 34227, 6111, 65111, 1311, 7111, 4934, 52503, 7177, 2968, 97031, 19931, 27133, 54175, 18211, 8211, 1211, 11211, 43934, 52503, 57177, 9658, 9731, 19931,]
+                    }, {
+                        name: 'user_engagement',
+                        data: [21121, 11611, 7988, 12169, 35112, 72452, 34400, 34227, 1111, 29111, 6111, 20211, 4934, 52503, 17177, 29658, 27031, 19931, 13133, 154175, 18211, 8211, 1711, 7111, 43234, 51503, 57177, 9658, 97031, 119931, 10112,]
+                    }, {
+                        name: 'click',
+                        data: [61111, 2911, 7988, 12169, 55112, 9452, 24400, 24227, 12111, 5111, 6111, 5211, 43934, 52503, 7177, 19658, 27031, 19931, 12133, 54175, 8211, 8211, 1711, 1111, 13934, 52503, 8111, 11011, 7988, 12169, 27112,]
+                    }, {
+                        name: 'view_search_results',
+                        data: [41411, 1111, 7988, 12169, 15112, 22452, 14400, 14227, 4111, 5111, 16111, 2811, 43934, 52503, 57177, 9658, 97031, 9931, 7133, 54175, 18211, 8211, 1711, 7111, 3934, 1503, 27177, 9658, 27031, 19931, 42112,]
+                    }],
+                    responsive: {
+                        rules: [{
+                            condition: {
+                                maxWidth: 500
                             },
-                            colors: _Color,
-                            yAxis: {
-                                title: {
-                                    text: 'Number of Employees'
+                            chartOptions: {
+                                legend: {
+                                    layout: 'horizontal',
+                                    align: 'center',
+                                    verticalAlign: 'bottom'
                                 }
-                            },
-                            xAxis: {
-                                accessibility: {
-                                    rangeDescription: 'Range: 1 to 30'
+                            }
+                        }]
+                    }
+                });
+                // 長條2
+                Highcharts.chart('axes_line_column2', {
+                    chart: {
+                        zoomType: 'xy'
+                    },
+                    title: {
+                        text: 'Top 10'
+                    },
+                    // subtitle: {
+                    //     text: 'Source: 勞安所科研採購網'
+                    // },
+                    colors: _Color,
+                    xAxis: [{
+                        categories: ['2025/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                        crosshair: true
+                    }],
+                    yAxis: [{ // Primary yAxis
+                        labels: {
+                            format: '{value}',
+                            style: {
+                                color: Highcharts.getOptions().colors[1]
+                            }
+                        },
+                        title: {
+                            text: '次數',
+                            style: {
+                                color: Highcharts.getOptions().colors[1]
+                            }
+                        }
+                    }, { // Secondary yAxis
+                        title: {
+                            text: '',
+                            style: {
+                                color: Highcharts.getOptions().colors[0]
+                            }
+                        },
+                        labels: {
+                            format: '{value}',
+                            style: {
+                                color: Highcharts.getOptions().colors[0]
+                            }
+                        },
+                        opposite: true
+                    }],
+                    tooltip: {
+                        shared: true
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'left',
+                        x: 20,
+                        verticalAlign: 'top',
+                        y: 20,
+                        floating: true,
+                        backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                            'rgba(255,255,255,0.25)'
+                    },
+                    series: [{
+                        name: 'Taiwan',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [3249.0, 3271.0, 24106.0, 24429.0, 144.0, 3260.0, 11035.0, 1988.0, 12776.0, 9219.0, 1295.0, 12854.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Japan',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [9217.0, 13226.0, 18289.0, 17294.0, 1278.0, 7191.0, 10125.0, 8226.0, 11213.0, 4718.0, 4153.0, 6519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'United States',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [6107.0, 8226.0, 6289.0, 11294.0, 7178.0, 5191.0, 9125.0, 10226.0, 8213.0, 2118.0, 3153.0, 9519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Canada',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [9307.0, 226.0, 12289.0, 12294.0, 5278.0, 6191.0, 3125.0, 9226.0, 12213.0, 8118.0, 1353.0, 1519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'France',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [5107.0, 9226.0, 2289.0, 1294.0, 12278.0, 4191.0, 6125.0, 4226.0, 8213.0, 7118.0, 2153.0, 3519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'New Zealand',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [5107.0, 1226.0, 6289.0, 7294.0, 8278.0, 2191.0, 9125.0, 2226.0, 8213.0, 4198.0, 8153.0, 2419.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Colombia',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [5107.0, 8226.0, 1289.0, 1094.0, 13278.0, 8191.0, 13125.0, 6226.0, 8213.0, 2118.0, 1153.0, 9519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Australia',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [15107.0, 8226.0, 9289.0, 1094.0, 12278.0, 8191.0, 19125.0, 16226.0, 3213.0, 6118.0, 1153.0, 12519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Poland',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [5107.0, 1226.0, 1289.0, 1094.0, 12278.0, 8191.0, 19125.0, 16226.0, 11213.0, 2118.0, 1153.0, 7519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }, {
+                        name: 'Brazil',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [2107.0, 1226.0, 7289.0, 1094.0, 2278.0, 8191.0, 9125.0, 6226.0, 4213.0, 2118.0, 1153.0, 2519.0],
+                        tooltip: {
+                            valueSuffix: ''
+                        }
+                    }]
+                });
+                (async () => {
+
+                    // Get random data for this sample
+                    function getRandomData(topology) {
+                        return topology.objects.default.geometries.map(() =>
+                            Math.round(Math.random() * 100)
+                        );
+                    }
+
+                    const topology = await fetch(
+                        'https://code.highcharts.com/mapdata/custom/world.topo.json'
+                    ).then(response => response.json());
+
+                    const antarctica = await fetch(
+                        'https://code.highcharts.com/mapdata/custom/antarctica.topo.json'
+                    ).then(response => response.json());
+
+                    const data = getRandomData(topology);
+
+                    // Get geometries for parallels
+                    function getParallelsGeometries(parallels) {
+                        return parallels.map(lat => {
+                            const coordinates = [];
+                            for (let lon = -180; lon <= 180; lon += 5) {
+                                coordinates.push([lon, lat]);
+                            }
+                            return {
+                                geometry: {
+                                    type: 'LineString',
+                                    coordinates
                                 },
-                                min: 0,
-                                max: 30,
-                                tickInterval: 1
-                            },
-                            legend: {
-                                layout: 'vertical',
-                                align: 'right',
-                                verticalAlign: 'middle'
-                            },
-                            plotOptions: {
-                                series: {
-                                    label: {
-                                        connectorAllowed: false
-                                    },
-                                    pointStart: 0
+                                lineWidth: lat === 0 ? 2 : undefined
+                            };
+                        });
+                    }
+
+                    function getGraticule() {
+                        const data = [];
+
+                        // Meridians
+                        for (let x = -180; x <= 180; x += 15) {
+                            data.push({
+                                geometry: {
+                                    type: 'LineString',
+                                    coordinates: x % 90 === 0 ? [
+                                        [x, -90],
+                                        [x, 0],
+                                        [x, 90]
+                                    ] : [
+                                        [x, -80],
+                                        [x, 80]
+                                    ]
                                 }
+                            });
+                        }
+
+                        // Parallels
+                        const parallels = [];
+                        for (let y = -90; y <= 90; y += 10) {
+                            parallels.push(y);
+                        }
+                        data.push(...getParallelsGeometries(parallels));
+
+                        return data;
+                    }
+
+                    let chart, smallChart;
+
+                    const drawMap = projectionKey => {
+
+                        // Apply projection
+                        const projection = Highcharts.merge({
+                            name: undefined
+                        }, {
+                            equalearth: {
+                                name: 'EqualEarth',
+                                projectedBounds: 'world'
                             },
-                            series: [{
-                                name: 'clicktracking',
-                                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175, 18211, 8211, 1711, 11111, 43934, 52503, 57177, 6958, 97031, 19931, 137133, 154175, 18211, 8211, 1711, 81111, 43934, 52503, 57177, 69658, 97031, 119931,]
-                            }, {
-                                name: 'first_visit',
-                                data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 20434, 211, 211, 1911, 12171, 43934, 52503, 57177, 69658, 97031, 21931, 37133, 154175, 18211, 8211, 1711, 12111, 43934, 5503, 57177, 69658, 97031, 119931,]
-                            }, {
-                                name: 'page_visit',
-                                data: [12744, 17722, 16005, 19771, 20185, 24377, 32147, 3387, 33111, 21211, 29111, 11611, 23934, 52503, 57177, 69658, 97031, 19931, 37133, 14175, 18211, 8211, 1711, 21111, 43934, 52503, 57177, 69658, 97031, 119931, 1112,]
-                            }, {
-                                name: 'scroll',
-                                data: [8111, 11011, 7988, 12169, 12112, 22452, 4400, 14227, 4111, 25211, 19111, 11911, 43934, 2503, 7177, 9658, 97031, 119931, 37133, 54175, 18211, 8211, 1711, 2111, 4334, 5503, 57177, 9258, 7031, 99931, 2112,]
-                            }, {
-                                name: 'session_start',
-                                data: [21111, 7111, 7988, 12169, 85112, 12452, 14400, 34227, 6111, 65111, 1311, 7111, 4934, 52503, 7177, 2968, 97031, 19931, 27133, 54175, 18211, 8211, 1211, 11211, 43934, 52503, 57177, 9658, 9731, 19931,]
-                            }, {
-                                name: 'user_engagement',
-                                data: [21121, 11611, 7988, 12169, 35112, 72452, 34400, 34227, 1111, 29111, 6111, 20211, 4934, 52503, 17177, 29658, 27031, 19931, 13133, 154175, 18211, 8211, 1711, 7111, 43234, 51503, 57177, 9658, 97031, 119931, 10112,]
-                            }, {
-                                name: 'click',
-                                data: [61111, 2911, 7988, 12169, 55112, 9452, 24400, 24227, 12111, 5111, 6111, 5211, 43934, 52503, 7177, 19658, 27031, 19931, 12133, 54175, 8211, 8211, 1711, 1111, 13934, 52503, 8111, 11011, 7988, 12169, 27112,]
-                            }, {
-                                name: 'view_search_results',
-                                data: [41411, 1111, 7988, 12169, 15112, 22452, 14400, 14227, 4111, 5111, 16111, 2811, 43934, 52503, 57177, 9658, 97031, 9931, 7133, 54175, 18211, 8211, 1711, 7111, 3934, 1503, 27177, 9658, 27031, 19931, 42112,]
-                            }],
-                            responsive: {
-                                rules: [{
-                                    condition: {
-                                        maxWidth: 500
+                            lcc: {
+                                name: 'LambertConformalConic',
+                                parallels: [30, 40],
+                                projectedBounds: { x1: -200, y1: -200, x2: 200, y2: 200 }
+                            },
+                            miller: {
+                                name: 'Miller',
+                                projectedBounds: 'world'
+                            },
+                            ortho: {
+                                name: 'Orthographic',
+                                projectedBounds: 'world'
+                            },
+                            webmerc: {
+                                name: 'WebMercator',
+                                projectedBounds: 'world'
+                            }
+                        }[projectionKey] || {});
+
+                        projection.rotation = [
+                            document.getElementById('rotation-lambda').value,
+                            document.getElementById('rotation-phi').value,
+                            document.getElementById('rotation-gamma').value
+                        ].map(Number);
+
+                        // Initialize the chart
+                        if (!chart) {
+
+                            console.time('@mapChart');
+
+                            chart = Highcharts.mapChart('container', {
+                                chart: {
+                                    height: '65%',
+                                    spacing: [10, 1, 10, 1]
+                                },
+
+                                title: {
+                                    text: undefined
+                                },
+
+                                legend: {
+                                    enabled: false
+                                },
+
+                                mapNavigation: {
+                                    enabled: true,
+                                    enableDoubleClickZoomTo: true,
+                                    buttonOptions: {
+                                        verticalAlign: 'bottom'
+                                    }
+                                },
+
+                                mapView: {
+                                    projection
+                                    /*
+                                    projection: {
+                                      name: 'WebMercator'
                                     },
-                                    chartOptions: {
-                                        legend: {
-                                            layout: 'horizontal',
-                                            align: 'center',
-                                            verticalAlign: 'bottom'
+                                    zoom: 4,
+                                    center: [6.5, 61]
+                                    */
+                                },
+
+                                colorAxis: {
+                                    tickPixelInterval: 100,
+                                    minColor: '#F1EEF6',
+                                    maxColor: '#900037'
+                                },
+
+                                tooltip: {
+                                    pointFormat: '{point.name}: {point.value}'
+                                },
+
+                                plotOptions: {
+                                    series: {
+                                        animationLimit: 500,
+                                        states: {
+                                            inactive: {
+                                                opacity: 1
+                                            }
+                                        }
+                                    },
+                                    mapline: {
+                                        enableMouseTracking: false
+                                    }
+                                },
+
+                                series: [{
+                                    name: 'Graticule',
+                                    type: 'mapline',
+                                    data: getGraticule(),
+                                    nullColor: '#e8e8e8',
+                                    color: '#e8e8e8'
+                                }, {
+                                    data,
+                                    mapData: topology,
+                                    joinBy: null,
+                                    name: 'Random data',
+                                    dataLabels: {
+                                        enabled: false,
+                                        format: '{point.name}'
+                                    },
+                                    clip: false
+                                }, {
+                                    mapData: antarctica,
+                                    allAreas: true,
+                                    name: 'Antarctica',
+                                    clip: false,
+                                    opacity: 0.75
+                                }, {
+                                    type: 'mapline',
+                                    data: [{
+                                        geometry: {
+                                            type: '',
+                                            coordinates: [
+                                            ]
+                                        },
+                                        color: '#3030d0'
+                                    }],
+                                    lineWidth: 2
+                                }, {
+                                    type: 'mappoint',
+                                    data: [{
+                                        geometry: {
+                                            type: 'Point',
+                                        },
+                                        name: ''
+                                    }, {
+                                        geometry: {
+                                            type: 'Point',
+                                        },
+                                        name: ''
+                                    }],
+                                    color: '#3030d0'
+                                }]
+                            });
+                            console.timeEnd('@mapChart');
+
+                        } else {
+                            chart.update({
+                                mapView: {
+                                    projection
+                                }
+                            });
+                        }
+
+
+                        if (projection.name === 'LambertConformalConic') {
+                            smallChart = Highcharts.mapChart('small-world-container', {
+                                chart: {
+                                    backgroundColor: 'transparent'
+                                },
+
+                                title: {
+                                    text: undefined
+                                },
+
+                                credits: {
+                                    enabled: false
+                                },
+
+                                legend: {
+                                    enabled: false
+                                },
+
+                                exporting: {
+                                    enabled: false
+                                },
+
+                                mapView: {
+                                    projection: {
+                                        name: 'Orthographic',
+                                        rotation: [0, -10, 0]
+                                    }
+                                },
+
+                                plotOptions: {
+                                    series: {
+                                        enableMouseTracking: false
+                                    },
+                                    map: {
+                                        animationLimit: 500,
+                                        allAreas: true,
+                                        clip: false,
+                                        nullColor: '#e0e0e0',
+                                        borderColor: '#ffffff',
+                                        borderWidth: 0.25
+                                    },
+                                    mapline: {
+                                        color: Highcharts.getOptions().colors[0]
+                                    }
+                                },
+
+                                series: [{
+                                    name: 'Graticule',
+                                    type: 'mapline',
+                                    data: getGraticule(),
+                                    color: '#f8f8f8'
+                                }, {
+                                    mapData: topology
+                                }, {
+                                    mapData: antarctica
+                                }, {
+                                    data: getParallelsGeometries(projection.parallels),
+                                    type: 'mapline',
+                                    id: 'parallels'
+                                }]
+                            });
+                        }
+
+                        // Toggle buttons
+                        document.querySelectorAll('#projection-buttons button').forEach(btn =>
+                            btn.classList.remove('active')
+                        );
+                        const button = document.querySelector(
+                            `#projection-buttons #${projectionKey}`
+                        );
+                        button.classList.add('active');
+
+                        // Toggle descriptions
+                        document.querySelectorAll('#descriptions div').forEach(div => {
+                            div.style.display = 'none';
+                        });
+                        const div = document.querySelector(
+                            `#descriptions #description-${projectionKey}`
+                        );
+                        div.style.display = 'block';
+
+
+                        // Toggle projection-dependent panels
+                        const panels = (button.getAttribute('data-panels') || '').split(',');
+                        document.querySelectorAll('.toggle-panel').forEach(panel => {
+                            panel.style.display = panels.includes(panel.id) ? '' : 'none';
+                        });
+
+
+                    };
+
+
+                    const enableInputs = () => {
+
+                        document.querySelectorAll('#projection-buttons button').forEach(btn =>
+                            btn.addEventListener('click', e => drawMap(e.target.id))
+                        );
+
+                        document.querySelectorAll('.rotation').forEach(input => {
+                            input.addEventListener('input', () => {
+                                const rotation = [
+                                    document.getElementById('rotation-lambda').value,
+                                    document.getElementById('rotation-phi').value,
+                                    document.getElementById('rotation-gamma').value
+                                ].map(Number);
+
+                                document.getElementById('rotation-lambda-output')
+                                    .innerText = rotation[0];
+                                document.getElementById('rotation-phi-output')
+                                    .innerText = rotation[1];
+                                document.getElementById('rotation-gamma-output')
+                                    .innerText = rotation[2];
+
+                                chart.mapView.update({
+                                    projection: {
+                                        rotation
+                                    }
+                                }, true, false);
+                            });
+                        });
+
+                        document.querySelectorAll('.preset-rotations a').forEach(input => {
+                            input.addEventListener('click', () => {
+                                const rotation = input.getAttribute('data-rotation')
+                                    .split(',')
+                                    .map(Number);
+                                rotation.push(0);
+
+                                // Get the distance between the current rotation and the new one
+                                // with 1000 steps so that we can animate it using the built-in
+                                // easing functions.
+                                const distance = Highcharts.Projection.distance(
+                                    chart.mapView.projection.options.rotation,
+                                    rotation
+                                ),
+                                    stepDistance = distance / 1000,
+                                    geodesic = Highcharts.Projection.geodesic(
+                                        chart.mapView.projection.options.rotation,
+                                        rotation,
+                                        true,
+                                        stepDistance
+                                    );
+
+                                // Use a custom animator property. For each step of the
+                                // animation, get the point along the animation trajectory and
+                                // update the projection with it.
+                                if (geodesic.length === 1000) {
+                                    chart.renderer.boxWrapper.animator = 0;
+                                    Highcharts.animate(
+                                        chart.renderer.boxWrapper,
+                                        { animator: 999 }, {
+                                        duration: 1000,
+                                        step: now => {
+                                            const rotation = geodesic[Math.round(now)];
+                                            chart.mapView.update({
+                                                projection: {
+                                                    rotation
+                                                }
+                                            }, true, false);
+
+                                            rotation.forEach((value, i) => {
+                                                const name = ['lambda', 'phi', 'gamma'][i];
+                                                document.getElementById(`rotation-${name}`)
+                                                    .value = Math.round(value);
+                                                document.getElementById(
+                                                    `rotation-${name}-output`
+                                                ).innerText = Math.round(value);
+                                            });
                                         }
                                     }
-                                }]
-                            }
+                                    );
+                                }
+                            });
                         });
-                        // 長條2
-                        Highcharts.chart('axes_line_column2', {
-                            chart: {
-                                zoomType: 'xy'
-                            },
-                            title: {
-                                text: 'Top 10'
-                            },
-                            // subtitle: {
-                            //     text: 'Source: 勞安所科研採購網'
-                            // },
-                            colors: _Color,
-                            xAxis: [{
-                                categories: ['2025/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-                                crosshair: true
-                            }],
-                            yAxis: [{ // Primary yAxis
-                                labels: {
-                                    format: '{value}',
-                                    style: {
-                                        color: Highcharts.getOptions().colors[1]
-                                    }
-                                },
-                                title: {
-                                    text: '次數',
-                                    style: {
-                                        color: Highcharts.getOptions().colors[1]
-                                    }
-                                }
-                            }, { // Secondary yAxis
-                                title: {
-                                    text: '',
-                                    style: {
-                                        color: Highcharts.getOptions().colors[0]
-                                    }
-                                },
-                                labels: {
-                                    format: '{value}',
-                                    style: {
-                                        color: Highcharts.getOptions().colors[0]
-                                    }
-                                },
-                                opposite: true
-                            }],
-                            tooltip: {
-                                shared: true
-                            },
-                            legend: {
-                                layout: 'vertical',
-                                align: 'left',
-                                x: 20,
-                                verticalAlign: 'top',
-                                y: 20,
-                                floating: true,
-                                backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
-                                    'rgba(255,255,255,0.25)'
-                            },
-                            series: [{
-                                name: 'Taiwan',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [3249.0, 3271.0, 24106.0, 24429.0, 144.0, 3260.0, 11035.0, 1988.0, 12776.0, 9219.0, 1295.0, 12854.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'Japan',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [9217.0, 13226.0, 18289.0, 17294.0, 1278.0, 7191.0, 10125.0, 8226.0, 11213.0, 4718.0, 4153.0, 6519.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'United States',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [6107.0, 8226.0, 6289.0, 11294.0, 7178.0, 5191.0, 9125.0, 10226.0, 8213.0, 2118.0, 3153.0, 9519.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'Canada',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [9307.0, 226.0, 12289.0, 12294.0, 5278.0, 6191.0, 3125.0, 9226.0, 12213.0, 8118.0, 1353.0, 1519.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'France',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [5107.0, 9226.0, 2289.0, 1294.0, 12278.0, 4191.0, 6125.0, 4226.0, 8213.0, 7118.0, 2153.0, 3519.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'New Zealand',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [5107.0, 1226.0, 6289.0, 7294.0, 8278.0, 2191.0, 9125.0, 2226.0, 8213.0, 4198.0, 8153.0, 2419.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'Colombia',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [5107.0, 8226.0, 1289.0, 1094.0, 13278.0, 8191.0, 13125.0, 6226.0, 8213.0, 2118.0, 1153.0, 9519.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'Australia',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [15107.0, 8226.0, 9289.0, 1094.0, 12278.0, 8191.0, 19125.0, 16226.0, 3213.0, 6118.0, 1153.0, 12519.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'Poland',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [5107.0, 1226.0, 1289.0, 1094.0, 12278.0, 8191.0, 19125.0, 16226.0, 11213.0, 2118.0, 1153.0, 7519.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }, {
-                                name: 'Brazil',
-                                type: 'column',
-                                yAxis: 1,
-                                data: [2107.0, 1226.0, 7289.0, 1094.0, 2278.0, 8191.0, 9125.0, 6226.0, 4213.0, 2118.0, 1153.0, 2519.0],
-                                tooltip: {
-                                    valueSuffix: ''
-                                }
-                            }]
-                        });
-                    </script>
 
+                        document.querySelectorAll('.parallels').forEach(input => {
+                            input.addEventListener('input', () => {
+                                const parallels = [
+                                    Number(document.getElementById('parallels-0').value),
+                                    Number(document.getElementById('parallels-1').value)
+                                ];
+                                chart.mapView.update({
+                                    projection: {
+                                        parallels
+                                    }
+                                }, true, false);
+                                document.getElementById('parallels-0-output')
+                                    .innerText = parallels[0];
+                                document.getElementById('parallels-1-output')
+                                    .innerText = parallels[1];
+
+                                if (smallChart) {
+                                    smallChart.get('parallels').remove();
+                                    smallChart.addSeries({
+                                        data: getParallelsGeometries(parallels),
+                                        type: 'mapline',
+                                        id: 'parallels'
+                                    }, true, false);
+                                }
+                            });
+                        });
+                    };
+
+                    drawMap('equalearth');
+
+                    enableInputs();
+                })();
+            </script>
 </body>
 
 </html>
