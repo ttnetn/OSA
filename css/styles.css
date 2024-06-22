@@ -1,12 +1,39 @@
-#container {
-    height: 500px;
-    min-width: 310px;
-    max-width: 800px;
-    margin: 0 auto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.loading {
-    margin-top: 10em;
-    text-align: center;
-    color: gray;
+body {
+    font-family: Arial, sans-serif;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    /* 最小高度設置為視窗高度 */
+}
+
+.flex-12 {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+}
+
+.col {
+    width: 100%;
+}
+
+.content_block {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.map-container {
+    width: 100%;
+    /* 寬度佔滿父元素的寬度 */
+    height: 500px;
+    /* 調整地圖容器的高度 */
 }

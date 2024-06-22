@@ -1,38 +1,4 @@
-#container {
-    width: 100%;
-    height: 80vh;
-    /* Height set to 80% of the viewport height */
-    margin: 0 auto;
-}
-
-.flex-12 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.col {
-    flex: 1 1 100%;
-}
-
-.content_block {
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-}
-
-._head {
-    margin-bottom: 10px;
-}
-
-.quick_btn {
-    margin-top: 10px;
-}
-
-.btn-orange {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.mapcontainer .highcharts-series path {
+    fill: #f0f0f0 !important;
+    stroke: #bada55 !important;
 }

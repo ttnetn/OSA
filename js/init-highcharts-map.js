@@ -1,3 +1,4 @@
+
 (async () => {
     const topology = await fetch(
         'https://code.highcharts.com/mapdata/custom/world.topo.json'
@@ -48,41 +49,41 @@
     ];
 
     // 創建圖表
-    Highcharts.mapChart('container', {
+    const chart = Highcharts.mapChart('mapcontainer', {
         chart: {
             map: topology
         },
-
         title: {
             text: '國家訪客'
         },
-
         subtitle: {
-            text: ' <a href="https://code.highcharts.com/mapdata/custom/world.topo.json"></a>'
+            text: '<a href="https://code.highcharts.com/mapdata/custom/world.topo.json"></a>'
         },
-
         mapNavigation: {
             enabled: true,
             buttonOptions: {
                 verticalAlign: 'bottom'
             }
         },
-
         colorAxis: {
-            min: 0
+            min: 0,
+            minColor: '#E6E6FA',  // 淡紫色
+            maxColor: '#4B0082'   // 深紫色
         },
-
         series: [{
             data: data,
             name: '瀏覽量',
             states: {
                 hover: {
-                    color: '#BADA55'
+                    color: '#FFFF99'  // 淺黃色
                 }
             },
             dataLabels: {
-                enabled: false // 不顯示國家名稱或縮寫
+                enabled: false
             }
         }]
     });
+
+    // 使用 JavaScript 強制應用特定樣式來防止衝突
+    document.querySelector('.mapcontainer .highcharts-background').style.fill = 'none';
 })();
