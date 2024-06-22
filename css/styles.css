@@ -34,6 +34,6 @@ body {
 .map-container {
     width: 100%;
     /* 寬度佔滿父元素的寬度 */
-    height: 500px;
+    height: 600px;
     /* 調整地圖容器的高度 */
 }
