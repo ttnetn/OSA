@@ -177,6 +177,69 @@
                                                 <td>1103</td>
                                                 <td>1203</td>
                                             </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>20250102</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>20250103</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>20250104</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>20250105</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">6</td>
+                                                <td>20250106</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">7</td>
+                                                <td>20250107</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">8</td>
+                                                <td>20250108</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">9</td>
+                                                <td>20250109</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">10</td>
+                                                <td>202501010</td>
+                                                <td>1503</td>
+                                                <td>1103</td>
+                                                <td>1203</td>
+                                            </tr>
                                             <!-- 其他行 -->
                                         </tbody>
                                     </table>
@@ -335,102 +398,97 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- JS-->
-                    <script src="js/jquery-3.3.1.min.js"></script>
-                    <script src="vendor/jquery.easing.min.js"></script>
-                    <!-- template customize js -->
-                    <script src="js/customize.js"></script>
-                    <!-- highlight -->
-                    <script src="vendor/highlight/highlight.pack.js"></script>
-                    <!-- tree view -->
-                    <script src="vendor/treeview/jquery.treeview.js"></script>
-                    <!-- highchart plugin -->
-                    <script src="https://code.highcharts.com/highcharts.js"></script>
-                    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-                    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-                    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-                    <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
-                    <script>
-                        $(".treeview .treeview").treeview();
-                        $('header').load("header.htm");
-                        $('aside').load("aside.htm");
-                        var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-                        // Line 折線圖1
-                        Highcharts.chart('line1', {
-                            title: {
-                                text: '統計圖表資訊'
-                            },
-                            subtitle: {
-                                text: '最多顯示31天'
-                            },
-                            colors: _Color,
-                            yAxis: {
-                                title: {
-                                    text: 'Number of Employees'
-                                }
-                            },
-                            xAxis: {
-                                categories: [
-                                    '2025-01-01', '2025-01-02', '2025-01-03', '2025-01-04', '2025-01-05',
-                                    '2025-01-06', '2025-01-07', '2025-01-08', '2025-01-09', '2025-01-10',
-                                    '2025-01-11', '2025-01-12', '2025-01-13', '2025-01-14', '2025-01-15',
-                                    '2025-01-16', '2025-01-17', '2025-01-18', '2025-01-19', '2025-01-20',
-                                    '2025-01-21', '2025-01-22', '2025-01-23', '2025-01-24', '2025-01-25',
-                                    '2025-01-26', '2025-01-27', '2025-01-28', '2025-01-29', '2025-01-30',
-                                    '2025-01-31'
-                                ],
-                                accessibility: {
-                                    rangeDescription: 'Range: 2025-01-01 to 2025-01-31'
-                                }
-                            },
-                            legend: {
-                                layout: 'vertical',
-                                align: 'right',
-                                verticalAlign: 'middle'
-                            },
-                            plotOptions: {
-                                series: {
-                                    label: {
-                                        connectorAllowed: false
-                                    },
-                                    pointStart: 0
-                                }
-                            },
-                            series: [{
-                                name: '網頁瀏覽量',
-                                data: [12000, 12503, 17177, 39658, 37031, 69931, 37133, 44175, 18211, 8211, 8711, 11111, 43934, 42503, 7177, 2958, 17031, 19931, 1133, 11475, 18211, 10211, 11711, 51111, 43934, 52503, 57177, 29658, 37031, 13931, 33333]
-                            }, {
-                                name: '訪客數',
-                                data: [15916, 14064, 69742, 29851, 32490, 30282, 38121, 20434, 8211, 7211, 10011, 12171, 43934, 12503, 57177, 1658, 27031, 21931, 37133, 14175, 18211, 11211, 10711, 12111, 43934, 11503, 57177, 39658, 27031, 11931, 4888]
-                            }, {
-                                name: '新訪客數',
-                                data: [12916, 14064, 12942, 29851, 32490, 30282, 38121, 9034, 10211, 9211, 10911, 12171, 43934, 12203, 10777, 29658, 27031, 11931, 37133, 15175, 11821, 8211, 10711, 9111, 43934, 12503, 10777, 9658, 27031, 2931, 17224]
-                            },],
-                            responsive: {
-                                rules: [{
-                                    condition: {
-                                        maxWidth: 500
-                                    },
-                                    chartOptions: {
-                                        legend: {
-                                            layout: 'horizontal',
-                                            align: 'center',
-                                            verticalAlign: 'bottom'
-                                        }
-                                    }
-                                }]
-                            }
-                        });
+                                        <!-- JS-->
+                                        <script src="js/jquery-3.3.1.min.js"></script>
+                                        <script src="vendor/jquery.easing.min.js"></script>
+                                        <!-- template customize js -->
+                                        <script src="js/customize.js"></script>
+                                        <!-- highlight -->
+                                        <script src="vendor/highlight/highlight.pack.js"></script>
+                                        <!-- tree view -->
+                                        <script src="vendor/treeview/jquery.treeview.js"></script>
+                                        <!-- highchart plugin -->
+                                        <script src="https://code.highcharts.com/highcharts.js"></script>
+                                        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+                                        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+                                        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                                        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                                        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+                                        <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+                                        <script>
+                                            $(".treeview .treeview").treeview();
+                                            $('header').load("header.htm");
+                                            $('aside').load("aside.htm");
+                                            var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+                                            // Line 折線圖1
+                                            Highcharts.chart('line1', {
+                                                title: {
+                                                    text: '統計圖表資訊'
+                                                },
+                                                subtitle: {
+                                                    text: '最多顯示31天'
+                                                },
+                                                colors: _Color,
+                                                yAxis: {
+                                                    title: {
+                                                        text: 'Number of Employees'
+                                                    }
+                                                },
+                                                xAxis: {
+                                                    categories: [
+                                                        '2025-01-01', '2025-01-02', '2025-01-03', '2025-01-04', '2025-01-05',
+                                                        '2025-01-06', '2025-01-07', '2025-01-08', '2025-01-09', '2025-01-10',
+                                                        '2025-01-11', '2025-01-12', '2025-01-13', '2025-01-14', '2025-01-15',
+                                                        '2025-01-16', '2025-01-17', '2025-01-18', '2025-01-19', '2025-01-20',
+                                                        '2025-01-21', '2025-01-22', '2025-01-23', '2025-01-24', '2025-01-25',
+                                                        '2025-01-26', '2025-01-27', '2025-01-28', '2025-01-29', '2025-01-30',
+                                                        '2025-01-31'
+                                                    ],
+                                                    accessibility: {
+                                                        rangeDescription: 'Range: 2025-01-01 to 2025-01-31'
+                                                    }
+                                                },
+                                                legend: {
+                                                    layout: 'vertical',
+                                                    align: 'right',
+                                                    verticalAlign: 'middle'
+                                                },
+                                                plotOptions: {
+                                                    series: {
+                                                        label: {
+                                                            connectorAllowed: false
+                                                        },
+                                                        pointStart: 0
+                                                    }
+                                                },
+                                                series: [{
+                                                    name: '網頁瀏覽量',
+                                                    data: [12000, 12503, 17177, 39658, 37031, 69931, 37133, 44175, 18211, 8211, 8711, 11111, 43934, 42503, 7177, 2958, 17031, 19931, 1133, 11475, 18211, 10211, 11711, 51111, 43934, 52503, 57177, 29658, 37031, 13931, 33333]
+                                                }, {
+                                                    name: '訪客數',
+                                                    data: [15916, 14064, 69742, 29851, 32490, 30282, 38121, 20434, 8211, 7211, 10011, 12171, 43934, 12503, 57177, 1658, 27031, 21931, 37133, 14175, 18211, 11211, 10711, 12111, 43934, 11503, 57177, 39658, 27031, 11931, 4888]
+                                                }, {
+                                                    name: '新訪客數',
+                                                    data: [12916, 14064, 12942, 29851, 32490, 30282, 38121, 9034, 10211, 9211, 10911, 12171, 43934, 12203, 10777, 29658, 27031, 11931, 37133, 15175, 11821, 8211, 10711, 9111, 43934, 12503, 10777, 9658, 27031, 2931, 17224]
+                                                },],
+                                                responsive: {
+                                                    rules: [{
+                                                        condition: {
+                                                            maxWidth: 500
+                                                        },
+                                                        chartOptions: {
+                                                            legend: {
+                                                                layout: 'horizontal',
+                                                                align: 'center',
+                                                                verticalAlign: 'bottom'
+                                                            }
+                                                        }
+                                                    }]
+                                                }
+                                            });
 
 
-                    </script>
+                                        </script>
 
 </body>
 
