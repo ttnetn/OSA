@@ -84,6 +84,4 @@
         }]
     });
 
-    // 使用 JavaScript 強制應用特定樣式來防止衝突
-    document.querySelector('.mapcontainer .highcharts-background').style.fill = 'none';
 })();
