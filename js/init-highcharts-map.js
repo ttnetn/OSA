@@ -3,7 +3,9 @@
     const topology = await fetch(
         'https://code.highcharts.com/mapdata/custom/world.topo.json'
     ).then(response => response.json());
-
+    // Prepare demo data. The data is joined to map using value of 'hc-key'
+    // property by default. See API docs for 'joinBy' for more info on linking
+    // data and map.
     // 示例數據
     const data = [
         ['fo', 10], ['um', 211], ['us', 812], ['jp', 813], ['sc', 14], ['in', 15],
