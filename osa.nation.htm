@@ -52,17 +52,6 @@
                                     </div>
                                     <div class="_content">
                                         <div class="flex-form flex-6-6">
-                                            <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <select name="search_deptid" id="search_deptid">
-                                                        <option value="" disabled selected></option>
-                                                        <option value="0">全部</option>
-                                                        <option value="001">Taiwan</option>
-                                                        <option value="002">Japan</option>
-                                                    </select>
-                                                    <label>國家</label>
-                                                </div>
-                                            </div>
                                             <div class="form_grp datepick">
                                                 <div class="startDate">
                                                     <div class="labelEffect">
@@ -88,262 +77,263 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="btn_grp">
-                                            <button class="btn reset">取消</button>
-                                            <button class="btn btn-primary">確認</button>
-                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn reset">取消</button>
+                                        <button class="btn btn-primary">確認</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- flex-12 -->
-                    <div class="flex-12">
-                        <div class="col">
-                            <p class="notice">目前條件 - 查詢日期：2025/1/1~2025/1/31</p>
+                </div>
+                <!-- flex-12 -->
+                <div class="flex-12">
+                    <div class="col">
+                        <p class="notice">預設條件 - 查詢日期：2025/1/1~2025/1/31</p>
+                    </div>
+                </div>
+                <!-- 插入國家 -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="content_block">
+                            <div class="map-container" id="mapcontainer"></div>
                         </div>
                     </div>
-                    <!-- 插入國家 -->
+                    <!-- 統計 -->
                     <div class="flex-12">
                         <div class="col">
                             <div class="content_block">
-                                <div class="map-container" id="mapcontainer"></div>
-                            </div>
-                        </div>
-                        <!-- 統計 -->
-                        <div class="flex-12">
-                            <div class="col">
-                                <div class="content_block">
-                                    <div class="_head">
-                                        <h3>統計</h3>
+                                <div class="_head">
+                                    <h3>統計</h3>
+                                </div>
+                                <div class="_head">
+                                    <p>僅顯示Top 10國家統計資訊</p>
+                                    <div class="quick_btn">
+                                        <button class="btn btn-orange" onclick="window.location.href='#';">
+                                            <i class="i_add"></i>匯出結果(Excel)
+                                        </button>
                                     </div>
-                                    <div class="_head">
-                                        <p>僅顯示Top 10國家統計資訊</p>
-                                        <div class="quick_btn">
-                                            <button class="btn btn-orange" onclick="window.location.href='#';">
-                                                <i class="i_add"></i>匯出結果(Excel)
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="_content">
-                                        <!-- 表格樣式 -->
-                                        <div class="table_wrapper">
-                                            <table class="table_hover">
-                                                <caption>國家統計區間報表</caption>
-                                                <thead>
-                                                    <tr>
-                                                        <th class="text-left">
-                                                            <a href="#">序號<i class="i_sort"></i></a>
-                                                        </th>
-                                                        <th class="text-left">日期</th>
-                                                        <!--th>預約案號</th>
+                                </div>
+                                <div class="_content">
+                                    <!-- 表格樣式 -->
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <caption>國家統計區間報表</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left">
+                                                        <a href="#">序號<i class="i_sort"></i></a>
+                                                    </th>
+                                                    <th class="text-left">日期</th>
+                                                    <!--th>預約案號</th>
                                                     <th>虛擬主機(編號)</th-->
-                                                        <th class="text-left">國家</th>
-                                                        <th class="text-left">
-                                                            <a href="#">網頁瀏覽量<i class="i_sort"></i></a>
-                                                        </th>
-                                                        <th class="text-left">
-                                                            <a href="#">訪客數<i class="i_sort"></i></a>
-                                                        </th>
-                                                        <th class="text-left">
-                                                            <a href="#">新訪客數<i class="i_sort"></i></a>
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="num">1</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <th class="text-left">國家</th>
+                                                    <th class="text-left">
+                                                        <a href="#">網頁瀏覽量<i class="i_sort"></i></a>
+                                                    </th>
+                                                    <th class="text-left">
+                                                        <a href="#">訪客數<i class="i_sort"></i></a>
+                                                    </th>
+                                                    <th class="text-left">
+                                                        <a href="#">新訪客數<i class="i_sort"></i></a>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="num">1</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>Taiwan</td>
-                                                        <td>21503</td>
-                                                        <td>4503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">2</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>Taiwan</td>
+                                                    <td>21503</td>
+                                                    <td>4503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">2</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>Japan</td>
-                                                        <td>19103</td>
-                                                        <td>3503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">3</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>Japan</td>
+                                                    <td>19103</td>
+                                                    <td>3503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">3</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>United States</td>
-                                                        <td>21503</td>
-                                                        <td>4503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">4</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>United States</td>
+                                                    <td>21503</td>
+                                                    <td>4503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">4</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>Canada</td>
-                                                        <td>19103</td>
-                                                        <td>3503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">5</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>Canada</td>
+                                                    <td>19103</td>
+                                                    <td>3503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">5</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>France</td>
-                                                        <td>21503</td>
-                                                        <td>4503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">6</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>France</td>
+                                                    <td>21503</td>
+                                                    <td>4503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">6</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>New Zealand</td>
-                                                        <td>19103</td>
-                                                        <td>3503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">7</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>New Zealand</td>
+                                                    <td>19103</td>
+                                                    <td>3503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">7</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>Colombia</td>
-                                                        <td>21503</td>
-                                                        <td>4503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">8</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>Colombia</td>
+                                                    <td>21503</td>
+                                                    <td>4503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">8</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>Australia</td>
-                                                        <td>19103</td>
-                                                        <td>3503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">9</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>Australia</td>
+                                                    <td>19103</td>
+                                                    <td>3503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">9</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>Poland</td>
-                                                        <td>21503</td>
-                                                        <td>4503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="num">10</td>
-                                                        <td>2025/1/1~2025/1/31</td>
-                                                        <!--td>1110101001</td>
+                                                    <td>Poland</td>
+                                                    <td>21503</td>
+                                                    <td>4503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">10</td>
+                                                    <td>2025/1/1~2025/1/31</td>
+                                                    <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                        <td>Brazil</td>
-                                                        <td>19103</td>
-                                                        <td>3503</td>
-                                                        <td>1503</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- JS-->
-                                        <script src="js/jquery-3.3.1.min.js"></script>
-                                        <script src="vendor/jquery.easing.min.js"></script>
-                                        <!-- template customize js -->
-                                        <script src="js/customize.js"></script>
-                                        <!-- highlight -->
-                                        <script src="vendor/highlight/highlight.pack.js"></script>
-                                        <!-- tree view -->
-                                        <script src="vendor/treeview/jquery.treeview.js"></script>
-                                        <!-- highchart plugin -->
-                                        <script src="https://code.highcharts.com/highcharts-more.js"></script>
-                                        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-                                        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-                                        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-                                        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-                                        <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
-                                        <script>
-                                            $(".treeview .treeview").treeview();
-                                            $('header').load("header.htm");
-                                            $('aside').load("aside.htm");
-                                            var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-                                            // Line 折線圖1
-                                            Highcharts.chart('line1', {
+                                                    <td>Brazil</td>
+                                                    <td>19103</td>
+                                                    <td>3503</td>
+                                                    <td>1503</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- JS-->
+                                    <script src="js/jquery-3.3.1.min.js"></script>
+                                    <script src="vendor/jquery.easing.min.js"></script>
+                                    <!-- template customize js -->
+                                    <script src="js/customize.js"></script>
+                                    <!-- highlight -->
+                                    <script src="vendor/highlight/highlight.pack.js"></script>
+                                    <!-- tree view -->
+                                    <script src="vendor/treeview/jquery.treeview.js"></script>
+                                    <!-- highchart plugin -->
+                                    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+                                    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+                                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                                    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+                                    <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+                                    <script>
+                                        $(".treeview .treeview").treeview();
+                                        $('header').load("header.htm");
+                                        $('aside').load("aside.htm");
+                                        var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+                                        // Line 折線圖1
+                                        Highcharts.chart('line1', {
+                                            title: {
+                                                text: '統計圖表資訊'
+                                            },
+                                            subtitle: {
+                                                text: '最多顯示31天'
+                                            },
+                                            colors: _Color,
+                                            yAxis: {
                                                 title: {
-                                                    text: '統計圖表資訊'
-                                                },
-                                                subtitle: {
-                                                    text: '最多顯示31天'
-                                                },
-                                                colors: _Color,
-                                                yAxis: {
-                                                    title: {
-                                                        text: 'Number of Employees'
-                                                    }
-                                                },
-                                                xAxis: {
-                                                    categories: [
-                                                        '2025-01-01', '2025-01-02', '2025-01-03', '2025-01-04', '2025-01-05',
-                                                        '2025-01-06', '2025-01-07', '2025-01-08', '2025-01-09', '2025-01-10',
-                                                        '2025-01-11', '2025-01-12', '2025-01-13', '2025-01-14', '2025-01-15',
-                                                        '2025-01-16', '2025-01-17', '2025-01-18', '2025-01-19', '2025-01-20',
-                                                        '2025-01-21', '2025-01-22', '2025-01-23', '2025-01-24', '2025-01-25',
-                                                        '2025-01-26', '2025-01-27', '2025-01-28', '2025-01-29', '2025-01-30',
-                                                        '2025-01-31'
-                                                    ],
-                                                    accessibility: {
-                                                        rangeDescription: 'Range: 2025-01-01 to 2025-01-31'
-                                                    }
-                                                },
-                                                legend: {
-                                                    layout: 'vertical',
-                                                    align: 'right',
-                                                    verticalAlign: 'middle'
-                                                },
-                                                plotOptions: {
-                                                    series: {
-                                                        label: {
-                                                            connectorAllowed: false
-                                                        },
-                                                        pointStart: 0
-                                                    }
-                                                },
-                                                series: [{
-                                                    name: '網頁瀏覽量',
-                                                    data: [12000, 12503, 17177, 39658, 37031, 69931, 37133, 44175, 18211, 8211, 8711, 11111, 43934, 42503, 7177, 2958, 17031, 19931, 1133, 11475, 18211, 10211, 11711, 51111, 43934, 52503, 57177, 29658, 37031, 13931, 33333]
-                                                }, {
-                                                    name: '訪客數',
-                                                    data: [15916, 14064, 69742, 29851, 32490, 30282, 38121, 20434, 8211, 7211, 10011, 12171, 43934, 12503, 57177, 1658, 27031, 21931, 37133, 14175, 18211, 11211, 10711, 12111, 43934, 11503, 57177, 39658, 27031, 11931, 4888]
-                                                }, {
-                                                    name: '新訪客數',
-                                                    data: [12916, 14064, 12942, 29851, 32490, 30282, 38121, 9034, 10211, 9211, 10911, 12171, 43934, 12203, 10777, 29658, 27031, 11931, 37133, 15175, 11821, 8211, 10711, 9111, 43934, 12503, 10777, 9658, 27031, 2931, 17224]
-                                                },],
-                                                responsive: {
-                                                    rules: [{
-                                                        condition: {
-                                                            maxWidth: 500
-                                                        },
-                                                        chartOptions: {
-                                                            legend: {
-                                                                layout: 'horizontal',
-                                                                align: 'center',
-                                                                verticalAlign: 'bottom'
-                                                            }
-                                                        }
-                                                    }]
+                                                    text: 'Number of Employees'
                                                 }
-                                            });
+                                            },
+                                            xAxis: {
+                                                categories: [
+                                                    '2025-01-01', '2025-01-02', '2025-01-03', '2025-01-04', '2025-01-05',
+                                                    '2025-01-06', '2025-01-07', '2025-01-08', '2025-01-09', '2025-01-10',
+                                                    '2025-01-11', '2025-01-12', '2025-01-13', '2025-01-14', '2025-01-15',
+                                                    '2025-01-16', '2025-01-17', '2025-01-18', '2025-01-19', '2025-01-20',
+                                                    '2025-01-21', '2025-01-22', '2025-01-23', '2025-01-24', '2025-01-25',
+                                                    '2025-01-26', '2025-01-27', '2025-01-28', '2025-01-29', '2025-01-30',
+                                                    '2025-01-31'
+                                                ],
+                                                accessibility: {
+                                                    rangeDescription: 'Range: 2025-01-01 to 2025-01-31'
+                                                }
+                                            },
+                                            legend: {
+                                                layout: 'vertical',
+                                                align: 'right',
+                                                verticalAlign: 'middle'
+                                            },
+                                            plotOptions: {
+                                                series: {
+                                                    label: {
+                                                        connectorAllowed: false
+                                                    },
+                                                    pointStart: 0
+                                                }
+                                            },
+                                            series: [{
+                                                name: '網頁瀏覽量',
+                                                data: [12000, 12503, 17177, 39658, 37031, 69931, 37133, 44175, 18211, 8211, 8711, 11111, 43934, 42503, 7177, 2958, 17031, 19931, 1133, 11475, 18211, 10211, 11711, 51111, 43934, 52503, 57177, 29658, 37031, 13931, 33333]
+                                            }, {
+                                                name: '訪客數',
+                                                data: [15916, 14064, 69742, 29851, 32490, 30282, 38121, 20434, 8211, 7211, 10011, 12171, 43934, 12503, 57177, 1658, 27031, 21931, 37133, 14175, 18211, 11211, 10711, 12111, 43934, 11503, 57177, 39658, 27031, 11931, 4888]
+                                            }, {
+                                                name: '新訪客數',
+                                                data: [12916, 14064, 12942, 29851, 32490, 30282, 38121, 9034, 10211, 9211, 10911, 12171, 43934, 12203, 10777, 29658, 27031, 11931, 37133, 15175, 11821, 8211, 10711, 9111, 43934, 12503, 10777, 9658, 27031, 2931, 17224]
+                                            },],
+                                            responsive: {
+                                                rules: [{
+                                                    condition: {
+                                                        maxWidth: 500
+                                                    },
+                                                    chartOptions: {
+                                                        legend: {
+                                                            layout: 'horizontal',
+                                                            align: 'center',
+                                                            verticalAlign: 'bottom'
+                                                        }
+                                                    }
+                                                }]
+                                            }
+                                        });
 
 
-                                        </script>
+                                    </script>
 
 </body>
 
